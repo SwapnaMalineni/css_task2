@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Example</title>
+
+  <style>
+    /* 1️⃣ Simple Selectors */
+    h1 {
+      color: darkblue;
+      text-align: center;
+    }
+
+    .highlight {
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    #unique {
+      color: crimson;
+      font-style: italic;
+    }
+
+    /* 2️⃣ Combinator Selectors */
+    div p {
+      color: green; /* descendant */
+    }
+
+    div > p {
+      font-weight: bold; /* direct child */
+    }
+
+    h2 + p {
+      color: orange; /* adjacent sibling */
+    }
+
+    h3 ~ p {
+      text-decoration: underline; /* general sibling */
+    }
+
+    /* 3️⃣ Pseudo-class Selectors */
+    a:hover {
+      color: red;
+    }
+
+    p:first-child {
+      font-size: 20px;
+    }
+
+    /* 4️⃣ Pseudo-element Selectors */
+    p::first-line {
+      font-weight: bold;
+      color: blue;
+    }
+
+    p::first-letter {
+      font-size: 24px;
+      color: purple;
+    }
+
+    /* 5️⃣ Attribute Selectors */
+    input[type="text"] {
+      border: 2px solid blue;
+      padding: 5px;
+    }
+
+    input[type="email"] {
+      border: 2px solid green;
+      padding: 5px;
+    }
+
+    a[target="_blank"] {
+      background-color: lightgray;
+      padding: 2px 4px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors Demo</h1>
+
+  <!-- 1️⃣ Simple Selectors -->
+  <p class="highlight">This paragraph uses a class selector (.highlight).</p>
+  <p id="unique">This paragraph uses an ID selector (#unique).</p>
+
+  <!-- 2️⃣ Combinator Selectors -->
+  <h2>Combinator Example</h2>
+  <div>
+    <p>This paragraph is a child inside div.</p>
+    <section>
+      <p>This paragraph is nested inside section (descendant).</p>
+    </section>
+  </div>
+
+  <h2>Adjacent Sibling</h2>
+  <p>This paragraph is immediately after h2 (adjacent sibling).</p>
+
+  <h3>General Sibling Example</h3>
+  <p>First paragraph after h3 (general sibling).</p>
+  <p>Second paragraph after h3 (general sibling).</p>
+
+  <!-- 3️⃣ Pseudo-class Selectors -->
+  <h2>Pseudo-class Example</h2>
+  <p>Hover over this <a href="#" target="_blank">link</a> to see pseudo-class effect.</p>
+
+  <!-- 4️⃣ Pseudo-element Selectors -->
+  <h2>Pseudo-element Example</h2>
+  <p>This paragraph demonstrates <code>::first-line</code> and <code>::first-letter</code>.</p>
+
+  <!-- 5️⃣ Attribute Selectors -->
+  <h2>Attribute Selectors Example</h2>
+  <input type="text" placeholder="Enter your name"><br><br>
+  <input type="email" placeholder="Enter your e
